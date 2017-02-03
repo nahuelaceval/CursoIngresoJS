@@ -7,6 +7,7 @@ function Mostar()
 	/* 
 	esto es un comentario de bloque
      http://www.w3schools.com/ esta es mi fuente de datos
+     
 	*/
 }
 
