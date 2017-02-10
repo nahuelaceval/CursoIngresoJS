@@ -19,13 +19,9 @@ function FahrenheitCentigrados ()
 	
 /*
 De Grados Farenheit a Centígrados 
-
 C = (F – 32) : 1,8 = 
-
 De Grados Centígrados a Farenheit 
-
 F = C x 1,8 + 32 = 
-
 */
 	
 
