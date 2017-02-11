@@ -25,12 +25,14 @@ function CalcularPrecio ()
  			if(Cantidad>5)
  			{
  			precioDescuento=(Cantidad*35)*0.5;		
- 			document.getElementById('precioDescuento').value=precioDescuento;
+ 			precioDescuento=document.getElementById('precioDescuento').value=precioDescuento;
  			}
 
+ 			if(cantidad==5 && "ArgentinaLuz")
+ 			{
+ 				precioDescuento=(Cantidad*35)*0.4;
+ 				precioDescuento=document.getElementById('precioDescuento').value=precioDescuento;
+ 			}
+
+
 }
-
-//B
-
-
-
