@@ -16,23 +16,53 @@ function CalcularPrecio ()
  	var jeluz;
  	var haziluminacion;
  	var osram;
+ 	var Marca;
 
  	Precio=35;
  	
  	Cantidad=document.getElementById('Cantidad').value;
+ 	Marca=document.getElementById('Marca').value;
  	
 
  			if(Cantidad>5)
  			{
- 			precioDescuento=(Cantidad*35)*0.5;		
+ 			precioDescuento=(Cantidad*Precio)*0.5;		
  			precioDescuento=document.getElementById('precioDescuento').value=precioDescuento;
  			}
 
- 			if(cantidad==5 && "ArgentinaLuz")
- 			{
- 				precioDescuento=(Cantidad*35)*0.4;
+ 			
+ 			
+ 				if(Cantidad==5 && Marca=="ArgentinaLuz") 
+ 				{
+
+ 				
+ 				precioDescuento=(Cantidad*Precio)*0.3;
  				precioDescuento=document.getElementById('precioDescuento').value=precioDescuento;
- 			}
+ 				
+ 				}
+ 			
+ 			
+ 				if(Cantidad==5 && Marca!="ArgentinaLuz")
+ 				{
+
+ 				precioDescuento=(Cantidad*Precio)*0.4;
+ 				precioDescuento=document.getElementById('precioDescuento').value=precioDescuento;	
+ 				}
+ 				
+ 			
+ 				
+
+
+ 			
+
+
+
+ 			
 
 
 }
+
+//B
+
+
+
