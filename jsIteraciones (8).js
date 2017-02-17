@@ -4,21 +4,23 @@ function Mostrar()
 	var contador=0;
 	var positivo=0;
 	var negativo=1;
-	var numero;
+	var resultado;
 	var respuesta='si';
+	var numero;
 
 	while(respuesta=="si")
+
 	{	numero=prompt("Ingrese su numero");
 		numero=parseInt(numero);
 		if(numero>0)
 		{
-			numero+numero;
+			positivo=(numero+numero);
 
 		}
-		if(numero<0)
+		else if(numero<0)
 		{
 
-			numero*numero;
+			negativo=(numero*numero);
 		}
 		
 		
@@ -26,7 +28,6 @@ function Mostrar()
 		respuesta=prompt("ingrese si para continuar");
 
 	}
-
 
 document.getElementById('suma').value=positivo;
 document.getElementById('producto').value=negativo;
