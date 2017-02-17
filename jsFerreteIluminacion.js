@@ -17,7 +17,7 @@ function CalcularPrecio ()
  	var haziluminacion;
  	var osram;
  	var Marca;
-
+ 	var Iva=0.10;
  	Precio=35;
  	
  	Cantidad=document.getElementById('Cantidad').value;
@@ -27,7 +27,7 @@ function CalcularPrecio ()
  			if(Cantidad>5)
  			{
  			precioDescuento=(Cantidad*Precio)*0.5;		
- 			precioDescuento=document.getElementById('precioDescuento').value=precioDescuento;
+ 			
  			}
 
  			
@@ -37,7 +37,7 @@ function CalcularPrecio ()
 
  				
  				precioDescuento=(Cantidad*Precio)*0.3;
- 				precioDescuento=document.getElementById('precioDescuento').value=precioDescuento;
+ 				
  				
  				}
  			
@@ -46,11 +46,56 @@ function CalcularPrecio ()
  				{
 
  				precioDescuento=(Cantidad*Precio)*0.4;
- 				precioDescuento=document.getElementById('precioDescuento').value=precioDescuento;	
+ 					
  				}
+
+
+ 			
+ 			
+ 			if(Cantidad==4 && Marca == "ArgentinaLuz")
+ 			{
+ 				
+ 					
+ 					precioDescuento=(Cantidad*Precio)*0.25;
+ 				
+ 			}
+ 			else if (Marca == "FelipeLamparas")
+ 			{
+ 				precioDescuento=(Cantidad*Precio)*0.25;
+ 			}
+ 			
+ 			else 
+ 			{
+ 				precioDescuento=(Cantidad*Precio)*0.2;
+ 			}
  				
  			
+ 			if(Cantidad==3 && Marca == "ArgentinaLuz")
+ 			{
+
+ 				precioDescuento=(Cantidad*Precio)*0.15;
+
+ 			}
+ 			else if(Marca== "FelipeLamparas")
+ 			{
+ 				precioDescuento=(Cantidad*Precio)*0.10;
+ 			}
+
  				
+ 			else
+ 			{
+ 				precioDescuento=(Cantidad*Precio)*0.05;
+ 			}
+
+ 			if(precioDescuento>120)
+ 			{
+ 				alert("IIBB Usted pago "+precioDescuento+ ", siendo "+ precioDescuento*Iva +" el impuesto que se pagó.");
+
+ 			}
+ 				
+ 				
+ 			
+ 				precioDescuento=document.getElementById('precioDescuento').value=precioDescuento;
 
 
  			
