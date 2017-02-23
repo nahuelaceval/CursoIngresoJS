@@ -3,10 +3,10 @@ function Mostrar()
 
 var clave = prompt("ingrese el número clave.");
 
-	while(clave!= "utn750")
+	while(clave!="utn750")
 	{
-		clave = prompt("Reingrese la clave");
+		clave=prompt("Te equivocaste. Reingresá la clave");
 	}
-	alert("Bienvenido");
+		alert("Bienvenido");
 
 }//FIN DE LA FUNCIÓN
