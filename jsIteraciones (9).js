@@ -2,154 +2,150 @@ function Mostrar()
 {
 
 	var contador=0;
-	// declarar variables
-	var edad;
+	var acumulador=0;
+	var numeroDeMujeres=0;
+	var numeroDeHombres=0;
 	var respuesta='si';
+	var numero;
 	var maximo;
 	var minimo;
-	var nombre;
-	var nombreDelMayor;
-	var sexo;
-	var nota;
-	var notaMinima;
-	var sexoNotaMinima;
-	var materiasAprobaras;
-	var aprobados;
-	var mujeresAprobadas;
-	var hombresAprobados;
 	var promedio;
-	var sumadorDeNotas;	
-	var f;
-	var m;
-	var promedioEdadMujeres;
-	var notaPar;
-	var yaTengoEl10="no";
-	var nombreDel10;
-	var	edadDel10;
-	var	sexoDel10;
+	var edad;
+	var sexo;
+	var hombresAprobados=0;
+	var mujeresAprobadas=0;
+	var hombresDesaprobados=0;
+	var mujeresDesaprobadas=0;
+	var edadAcumuladaHombres=0;
+	var edadAcumuladaMujeres=0;
+	var edadPromedioMujeres=0;
+	var edadPromedioHombres=0;
+	var cantidadMujeres=0;
 
-//mujeres y hombres desaprobadas
-//promedio de notas
-//edad promedio de las mujeres
+//mujeres y hombres desaprobadas :D
+//promedio de notas :D
+//edad promedio de las mujeres :D
 //cantidad de mujeres que aprobaron con nota par y son menores de edad
-
-
-		while(respuesta!='no')
-		{
-		edad=prompt("ingrese edad");
-		edad=parseInt(edad);
-		
-		nombre=prompt("por favor ingrese nombre");
-		while(edad<0 || edad>100)
-		{
-
-		edad=prompt("error, ingrese edad");
-		edad=parseInt(edad);
-		}
-
-		while(sexo!="f" && sexo!="m")
-		{
-			sexo=prompt("error, ingrese f o m para indicar su sexo");
-		}
-
-		//cantidad de personas aprobadas
-	if (nota>5)
-	{
-		aprobados=aprobados+1;
-	}		
-
-	acumuladorDeNotas+acumuladorDeNotasnotas+notas;
-////
-
-
-	if (nota==10 && yaTengoEl10 == "no")
-	{
-		nombreDel10=nombre;
-		edadDel10=edad;
-		sexoDel10=sexo;
-		yaTengoEl10="si o alguien o llalalala ";
-		
-	}
-
-
-if (sexo="f" && nota<4)
-{
-	desaprobaron=desaprobaron+1;
-	desaprobaronMujeres=sexo;
-}
-if (sexo "m" && nota<4)
-{
-
-	desaprobaron=desaprobaron+1;
-	desaprobaronHombres=sexo;
-}
-
-	
-		while(nota<0 || nota>11)
-		{
-
-			if(contador==1)
-			{
-				notaMinima=nota;
-				sexoNotaMinima=sexo;
-			}
-			else
-			{
-			if(notaTotal<nota)
-				NotaMinima=nota;
-			}
-
-		}
-
-		contador=contador+1;
-		
-
-		if(contador==1)
-
-		{
-			maximo=edad;
-			minimo=edad;
-			nombre=nombreDelMayor;
-			sexo=sexoNotaMinima;
-			notaMinima=nota;
-
-		}
-		////////
 	
 
-
-		else
+			while(respuesta!='no')
 		{
 
-			if (edad>maximo)
+			numero=prompt("ingrese su numero");
+			numero=parseInt(numero);
+			contador=contador+1;
+		
+			acumulador=acumulador+numero;
+			if (contador == 1)
 			{
-				maximo=edad;
-				nombreDelMayor=nombre;
-			}
-			if (edad<minimo)
-			{
-				minimo=edad;
+
+			maximo=numero;
+			minimo=numero;
 
 			}
+
+			if(contador>1 && numero > maximo)
+			{
+			maximo=numero;
+
+			}
+			if(contador>1 && numero < minimo)
+			{
+
+			minimo=numero;
+			}
+		
+		
+
+			promedio=(acumulador/contador); //promedio de notas
+
+
+
+			sexo=prompt("ingrese f o m para designar el sexo del alumno");
+
+			while(sexo!="f" && sexo!="m") //sexo
+			{
+
+			sexo=prompt("Error, ingrese f o m para designar el sexo del alumno");
+		
+			}
+
+
+
+			if (sexo=="f")
+			{
+			numeroDeMujeres=numeroDeMujeres+1;
+
+
+			} 
+
+			if (sexo=="m")
+			{
+			numeroDeHombres=numeroDeHombres+1;
+
+			}
+
+  			
+  			if (numero>3&&sexo=="m")
+  			{
+  				hombresAprobados=hombresAprobados+1;
+
+  			}
+
+  			if (numero>3&&sexo=="f")
+  			{
+
+  				mujeresAprobadas=mujeresAprobadas+1;
+  			}
+
+  			if (numero<4&&sexo=="m")
+  			{
+
+  				hombresDesaprobados=hombresDesaprobados+1;
+  			}
+
+  			if (numero<4&&sexo=="f")
+  			{
+
+  				mujeresDesaprobadas=mujeresDesaprobadas+1;
+  			}
 			
+			if(sexo=="f")
+			{
+				cantidadMujeres=cantidadMujeres+1;
+			}
+
+  			edad=prompt("¿cual es la edad del alumno?");
+  			edad=parseInt(edad);
+
+  			while(edad<1 || edad>90)
+  			{
+  				edad=prompt("edad incorrecta, por favor ingrese la edad del alumno");
+  			}
+
+  				
+
+  			if(sexo=="f" && edad<90)
+  			{
+  				edadAcumuladaMujeres=edadAcumuladaMujeres+edad;
+
+  			}	
+
+  			if(sexo=="m" && edad<90) 
+  			{
+  				edadAcumuladaHombres=edadAcumuladaHombres+edad;
+
+  			}
+
+  				edadPromedioMujeres=edadAcumuladaMujeres/cantidadMujeres;
+			respuesta=prompt("¿quiere seguir agregando numeros?");
+
 		}
 
-
-		}
-
-
-		respuesta=prompt("para salir teclee no");
-	
-		}	alert(nombre);
 		
-				
 
-			
-		
-		
+
 		document.getElementById('maximo').value=maximo;
 		document.getElementById('minimo').value=minimo;
-
-
 
 }//FIN DE LA FUNCIÓN
