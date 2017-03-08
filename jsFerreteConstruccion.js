@@ -17,7 +17,7 @@ var largo;
    largo=parseInt(largo);
    ancho=parseInt(ancho);
    radio=parseInt(radio);
-   resultado=((largo+ancho)*3);
+   resultado=(2*(largo+ancho)*3);
    alert(resultado);
    
 
@@ -33,7 +33,7 @@ function Circulo ()
 	largo=parseInt(largo);
 	ancho=parseInt(ancho);
 	radio=parseInt(radio);
-	resultado=radio*3.14;
+	resultado=(2*(3.14*radio)*3);
 	alert(resultado);
 }
 function Materiales () 
@@ -41,14 +41,15 @@ function Materiales ()
 	var largo;
 	var ancho;
 	var radio;
+	var cemento;
+	var cal;
 	largo=document.getElementById('Largo').value;
 	ancho=document.getElementById('Ancho').value;
 	radio=document.getElementById('Radio').value;
 	largo=parseInt(largo);
 	ancho=parseInt(ancho);
 	radio=parseInt(radio);
-    resultado=(largo*ancho)*2;
-    resultadoB=(largo*ancho)*3;
-	alert("cemento "+resultado);
-	alert("cal "+resultadoB);
+	cemento=(largo*ancho)*2;
+	cal=(largo*ancho)*3;
+	alert("se necesitan "+cemento+ " de cemento y "+ cal +" de cal");
 }
