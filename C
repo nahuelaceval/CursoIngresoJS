@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "mi_funcion.h"
+
+
+
+float main(void)
+{
+
+
+    float x,y,z;
+
+
+
+    printf("ingrese numero a dividir: ");
+    scanf("%f",&x);
+    printf("ingrese numero a dividir: ");
+    scanf("%f",&y);
+    z=dividir(x,y);
+    printf("el resultado es %f: ",z);
+
+    if (y==0)
+    {
+        printf("El divisor no puede ser 0");
+
+    }
+
+}
+
+
+
+float dividir(float a, float b)
+
+{
+    float total;
+    total= a/b;
+    return total;
+}
+
+
+
+//mi funcion.h float dividir(float a, float b);
+//mi funcion.c
+////
+float main(void)
+{
+
+
+    float x,y,z;
+
+
+
+    printf("ingrese numero a dividir: ");
+    scanf("%f",&x);
+    printf("ingrese numero a dividir: ");
+    scanf("%f",&y);
+    z=dividir(x,y);
+    printf("el resultado es %f: ",z);
+
+    if (y==0)
+    {
+        printf("El divisor no puede ser 0");
+
+    }
+
+}
+
+
+
+float dividir(float a, float b)
+
+{
+    float total;
+    total= a/b;
+    return total;
+}
+
+
+
